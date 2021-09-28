@@ -1,17 +1,16 @@
-# DO NOT SEND THIS FILE BY E-MAIL!
-# - Cemre
+# Assignment works but need to explain why sqrt(x) is a "bad" function
 
 import numpy as np
 
-a = int(input("enter a: "))
-b = int(input("enter b: "))
+a = 0.0
+b = 1.0
 n = int(input("enter n: "))
 m = int(input("enter m: "))
 
 array = np.zeros((n, m), dtype=np.float128)
 
 
-def rmbrg(a, b, n, m):
+def rmbrg(a: float, b: float, n: float, m: float):
     array[0][0] = 0.5 * (b - a) * (f(a) + f(b))
 
     for i in range(n):
