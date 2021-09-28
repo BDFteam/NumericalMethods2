@@ -3,10 +3,10 @@
 
 import numpy as np
 
-a = float(input("enter a: "))
-b = float(input("enter b: "))
-n = float(input("enter n: "))
-m = float(input("enter m: "))
+a = int(input("enter a: "))
+b = int(input("enter b: "))
+n = int(input("enter n: "))
+m = int(input("enter m: "))
 
 array = np.zeros((n, m), dtype=np.float128)
 
@@ -30,8 +30,8 @@ def rmbrg(a, b, n, m):
                 )
 
 
-def f(x) -> float:
-    return 4 / (1 + (x ** 2))
+def f(x: float) -> float:
+    return x ** 0.5
 
 
 rmbrg(a, b, n, m)
