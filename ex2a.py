@@ -8,7 +8,7 @@ b = int(input("enter b: "))
 n = int(input("enter n: "))
 m = int(input("enter m: "))
 
-array = [[0 for i in range(m)] for j in range(n)]
+array = np.zeros((n, m))
 
 def rmbrg(a,b, n,m):
 
@@ -26,7 +26,7 @@ def rmbrg(a,b, n,m):
             if(i != 0 and j != 0):
                 array[i][j] = array[i][j-1] + (1/((4**j)-1)) * (array[i][j-1] - array[i-1][j-1])
                 
-def f(x):
+def f(x) -> float:
     return(4/(1+(x**2)))
 
 rmbrg(a,b,n,m)
