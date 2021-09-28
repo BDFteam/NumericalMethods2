@@ -11,15 +11,13 @@ m = int(input("enter m: "))
 array = np.zeros((n, m))
 
 def rmbrg(a,b, n,m):
+    array[0][0] = 0.5 * (b-a) * (f(a)+f(b))
 
     for i in range(n):
-        if(i == 0):
-            array[i][0] = 0.5 * (b-a) * (f(a)+f(b))
-
         if(i != 0):
             sum = 0
             for k in range((2**(i-1))):
-                sum += f(a + ((2*k)-1) * ((b-a)/(2**i)))
+                sum += f(a + ((2*(k+1))-1) * ((b-a)/(2**i)))
             array[i][0] = (0.5 * array[i-1][0]) + ((((b-a)/(2**i))) * sum)
         
         for j in range(m):
