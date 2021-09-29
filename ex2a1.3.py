@@ -10,7 +10,7 @@ m = int(input("enter m: "))
 array = np.zeros((n, m), dtype=np.float128)
 
 
-def rmbrg(a: float, b: float, n: float, m: float):
+def rmbrg(a: float, b: float, n: int, m: int):
     array[0][0] = 0.5 * (b - a) * (f(a) + f(b))
 
     for i in range(n):

@@ -12,8 +12,8 @@ def rmbrg(
     m: int,
     function: Callable[[float], float],
 ):
-    array = np.zeros((n, m), dtype=np.longdouble)
-    array[0][0] = (
+    matrix = np.zeros((n, m), dtype=np.longdouble)
+    matrix[0][0] = (
         0.5
         * (right_boundry - left_boundry)
         * (function(left_boundry) + function(right_boundry))
@@ -28,21 +28,21 @@ def rmbrg(
                     + ((2 * (k + 1)) - 1)
                     * ((right_boundry - left_boundry) / (2 ** i))
                 )
-            array[i][0] = (0.5 * array[i - 1][0]) + (
+            matrix[i][0] = (0.5 * matrix[i - 1][0]) + (
                 (((right_boundry - left_boundry) / (2 ** i))) * sum
             )
 
         for j in range(min(m, i + 1)):
             if i != 0 and j != 0:
-                array[i][j] = array[i][j - 1] + (1 / ((4 ** j) - 1)) * (
-                    array[i][j - 1] - array[i - 1][j - 1]
+                matrix[i][j] = matrix[i][j - 1] + (1 / ((4 ** j) - 1)) * (
+                    matrix[i][j - 1] - matrix[i - 1][j - 1]
                 )
 
-    return array
+    return matrix
 
 
-def g(x: float) -> float:
-    return 4 / (1 + (x ** 2))
+# def f(x: float) -> float:
+#     return 4 / (1 + (x ** 2))
 
 
 def main():
@@ -51,7 +51,7 @@ def main():
     n = int(input("enter n: "))
     m = int(input("enter m: "))
 
-    print(rmbrg(a, b, n, m, g))
+    print(rmbrg(a, b, n, m, lambda x: 4 / (1 + (x ** 2))))
 
 
 if __name__ == "__main__":
