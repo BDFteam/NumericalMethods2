@@ -7,10 +7,10 @@ import numpy as np
 
 def rmbrg(
     function: Callable[[float], float],
-    left_boundry: float = 0,
-    right_boundry: float = 0,
-    n: int = 0,
-    m: int = 0,
+    left_boundry: float = None,
+    right_boundry: float = None,
+    n: int = None,
+    m: int = None,
 ):
     left_boundry = (
         left_boundry
