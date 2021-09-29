@@ -3,15 +3,15 @@
 
 import numpy as np
 
-a = float(input("enter a: "))
-b = float(input("enter b: "))
-n = float(input("enter n: "))
-m = float(input("enter m: "))
+a = int(input("enter a: "))
+b = int(input("enter b: "))
+n = int(input("enter n: "))
+m = int(input("enter m: "))
 
 array = np.zeros((n, m), dtype=np.float128)
 
 
-def rmbrg(a: float, b: float, n: float, m: float):
+def rmbrg(a, b, n, m):
     array[0][0] = 0.5 * (b - a) * (f(a) + f(b))
 
     for i in range(n):
