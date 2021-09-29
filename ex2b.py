@@ -2,11 +2,16 @@ import numpy as np
 import numpy.random as rnd
 import matplotlib.pyplot as plt
 
+from ex2a import rmbg
+# print(rmbrg(a, b, n, m, lambda x: 4 / (1 + (x ** 2))))
+
 
 def main():
     u = rnd.random()
     n = 1000
     u_array = rnd.random(1000)
+    simulatesample(u)
+    # plot()
 
 
 def plot():
@@ -35,7 +40,10 @@ def f(x):
 
 
 def simulatesample(u):
-    return 0
+    big_f = ?
+    big_f_solvable = big_f - u
+    
 
 
-plot()
+if __name__ == "__main__":
+    main()

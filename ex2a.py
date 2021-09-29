@@ -26,7 +26,7 @@ def rmbrg(
     m = m if m is not None else int(input("enter m: "))
 
     matrix = np.zeros((n, m), dtype=np.longdouble)
-    matrix[0, 0] = (
+    matrix[0][0] = (
         0.5
         * (right_boundry - left_boundry)
         * (function(left_boundry) + function(right_boundry))
