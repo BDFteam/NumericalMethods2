@@ -34,4 +34,8 @@ def f(x):
     return 0
 
 
+def simulatesample(u):
+    return 0
+
+
 plot()
