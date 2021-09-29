@@ -20,16 +20,17 @@ def plot():
         x += 0.1
         i += 1
     plt.plot(qr, qq)
+    plt.xlim([0, 10])
+    plt.ylim([0, 3])
     plt.grid(linestyle=":", linewidth=1.5)
     plt.show()
 
 
 def f(x):
     if x > 0:
-        return (np.sqrt(5 / (2 * np.pi * (x ** 3)))) ** (
-            (((-x - 5) ** 2) / (10 * x))
-        )
-
+        part1 = (5 / (2 * np.pi * x ** 3)) ** 0.5
+        part2 = (-((x - 5) ** 2)) / (10 * x)
+        return part1 ** part2
     return 0
 
 
