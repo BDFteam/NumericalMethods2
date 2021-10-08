@@ -54,10 +54,6 @@ def rmbrg(
     return matrix
 
 
-# def f(x: float) -> float:
-#     return 4 / (1 + (x ** 2))
-
-
 def main():
     print(rmbrg(lambda x: 4 / (1 + (x ** 2))))
 

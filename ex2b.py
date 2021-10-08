@@ -10,6 +10,7 @@ from scipy.stats import describe
 
 def main():
     # plot()
+
     n = 1000
     u_array = rnd.random(1000)
     a_array = np.empty(n)
@@ -24,12 +25,12 @@ def main():
 
 
 def plot():
-    qr = np.linspace(0.1, 20, 1000)
-    qq = np.empty(1000)
-    for i, x in enumerate(qr):
-        qq[i] = f(x)
-        qr[i] = x
-    plt.plot(qr, qq)
+    x_array = np.linspace(0.1, 20, 1000)
+    y_array = np.empty(1000)
+    for i, x in enumerate(x_array):
+        y_array[i] = f(x)
+        x_array[i] = x
+    plt.plot(x_array, y_array)
     plt.xlim([0, 20])
     plt.grid(linestyle=":", linewidth=1.5)
     plt.show()
