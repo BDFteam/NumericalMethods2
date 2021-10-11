@@ -7,8 +7,7 @@ b = 1.0
 n = int(input("enter n: "))
 m = int(input("enter m: "))
 
-array = np.zeros((n, m), dtype=np.float128)
-
+array = np.zeros((n, m))
 
 
 def rmbrg(a: float, b: float, n: int, m: int):
