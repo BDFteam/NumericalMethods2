@@ -1,7 +1,4 @@
-# DO NOT SEND THIS FILE BY E-MAIL!
-# - Cemre
 from typing import Callable
-
 import numpy as np
 
 
